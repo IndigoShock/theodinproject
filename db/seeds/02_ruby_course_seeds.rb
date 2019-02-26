@@ -38,7 +38,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/basic_ruby/lesson_how_this_course_will_work.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -50,7 +50,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/basic_ruby/lesson_building_blocks.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -62,7 +62,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/basic_ruby/project_building_blocks.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -74,7 +74,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/basic_ruby/lesson_advanced_building_blocks.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -86,7 +86,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/basic_ruby/project_advanced_building_blocks.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 # +++++++++++
@@ -111,7 +111,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/intermediate_ruby/lesson_oop.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -123,7 +123,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/intermediate_ruby/project_oop.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -135,7 +135,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/intermediate_ruby/lesson_serialization.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -147,7 +147,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/intermediate_ruby/project_event_manager.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -159,7 +159,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/intermediate_ruby/project_file_io.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 # +++++++++++
@@ -184,7 +184,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/computer_science/lesson_a_very_brief_intro_to_cs.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -196,7 +196,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/computer_science/lesson_recursion.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -208,7 +208,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/computer_science/project_recursion.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -220,7 +220,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/computer_science/lesson_common_data_structures_algorithms.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -232,7 +232,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/computer_science/project_linked_lists.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -244,7 +244,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/computer_science/project_data_structures_algorithms.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 # +++++++++++
@@ -262,14 +262,27 @@ section = create_or_update_section(
 
 lesson_position += 1
 create_or_update_lesson(
-  title: "Introduction to RSpec",
-  title_url: "Introduction to RSpec".parameterize,
-  description: "Many tech companies these days rely on test-heavy methods of development so it's time to get familiar with it.",
+  title: "Test Driven Development",
+  title_url: "Test Driven Development".parameterize,
+  description: "In this lesson you will learn about what TDD is and why it's important.",
   position: lesson_position,
   section_id: section.id,
   is_project: false,
-  url: "/ruby_programming/testing_with_rspec/lesson_intro_to_rspec.md",
-  repo: 'ruby_course'
+  url: "/ruby_programming/testing_with_rspec/test_driven_development.md",
+  repo: 'curriculum'
+)
+
+
+lesson_position += 1
+create_or_update_lesson(
+  title: "Introduction to RSpec",
+  title_url: "Introduction to RSpec".parameterize,
+  description: 'In this lesson you will learn the basics of RSpec, the most popular testing framework in the Ruby world.',
+  position: lesson_position,
+  section_id: section.id,
+  is_project: false,
+  url: "/ruby_programming/testing_with_rspec/introduction_to_rspec.md",
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -281,7 +294,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/testing_with_rspec/project_testing_your_ruby_code.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 # +++++++++++
@@ -306,7 +319,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/git/lesson_a_deeper_look_at_git.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -318,7 +331,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/git/lesson_using_git_in_the_real_world.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 # +++++++++++
@@ -343,7 +356,7 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: true,
   url: "/ruby_programming/conclusion/project_ruby_final.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )
 
 lesson_position += 1
@@ -355,5 +368,5 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/ruby_programming/conclusion/lesson_conclusion.md",
-  repo: 'ruby_course'
+  repo: 'curriculum'
 )

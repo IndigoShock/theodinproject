@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :user, aliases: [:creator] do
     sequence :username do |n|
       "foobar#{n}"
@@ -7,12 +7,12 @@ FactoryGirl.define do
       "foo#{n}@bar.com"
     end
 
-    password 'foobar'
-    confirmed_at Time.now - 5_000_000
-    avatar 'http://github.com/fake-avatar'
+    password { 'foobar' }
+    confirmed_at { Time.now - 5_000_000 }
+    avatar { 'http://github.com/fake-avatar' }
 
     factory :admin do
-      admin true
+      admin { true }
     end
   end
 
@@ -23,9 +23,9 @@ FactoryGirl.define do
     sequence :position do |n|
       n
     end
-    url 'http://www.bogus.com/subpage/whatever.git'
+    url { 'http://www.bogus.com/subpage/whatever.git' }
     association :section
-    content 'content'
+    content { 'content' }
   end
 
   factory :section do
@@ -50,8 +50,8 @@ FactoryGirl.define do
   end
 
   factory :project do
-    repo_url 'https://github.com/user/repo'
-    live_preview 'http://mysite.com'
+    repo_url { 'https://github.com/user/repo' }
+    live_preview { 'http://mysite.com' }
     user
   end
 end

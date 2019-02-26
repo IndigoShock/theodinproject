@@ -9,13 +9,14 @@ class MailchimpSubscription
   end
 
   def self.create(options)
-    instance = new(options)
-    instance.create
-    instance
+    new(options).create
   end
 
   def create
     mailchimp_list.members.create(body: subscriber_details)
+  rescue Gibbon::MailChimpError => e
+    NewRelic::Agent.notice_error(e)
+    false
   end
 
   private

@@ -11,7 +11,7 @@ lesson_position = 0
 
 course = create_or_update_course(
   title: "HTML and CSS",
-  title_url: "HTML and CSS".parameterize,
+  title_url: "HTML5 and CSS3".parameterize,
   description: "Good web design doesn't happen by accident. Learn how to make all that work you've done on the backend look great in a web browser! You'll be equipped to deeply understand and create your own design frameworks.",
   position: course_position
 )
@@ -210,6 +210,30 @@ create_or_update_lesson(
   section_id: section.id,
   is_project: false,
   url: "/html_css/floats_positioning.md",
+  repo: 'curriculum'
+)
+
+lesson_position += 1
+create_or_update_lesson(
+  title: "Flexbox",
+  title_url: "Flexbox".parameterize,
+  description: "Flexbox layout distributes space along a single column or row. Like float layouts, but more versatile.",
+  position: lesson_position,
+  section_id: section.id,
+  is_project: false,
+  url: "/html_css/flexbox_layout.md",
+  repo: 'curriculum'
+)
+
+lesson_position += 1
+create_or_update_lesson(
+  title: "Grid",
+  title_url: "Grid".parameterize,
+  description: "Grid divides elements into columns & rows. A modern, powerful way to setout your layout.",
+  position: lesson_position,
+  section_id: section.id,
+  is_project: false,
+  url: "/html_css/grid_layout.md",
   repo: 'curriculum'
 )
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   root 'static_pages#home'
 
   devise_for :users, controllers: {
@@ -12,6 +13,10 @@ Rails.application.routes.draw do
     get 'sign_up' => 'devise/registrations#new'
     get 'signup' => 'devise/registrations#new'
     get '/confirm_email' => 'users#send_confirmation_link'
+  end
+
+  namespace :api do
+    resources :lesson_completions, only: [:index]
   end
 
   get 'home' => 'static_pages#home'

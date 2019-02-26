@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.5'
 
-gem 'rails',                        '~> 5.0.0'
+gem 'rails',                        '~> 5.0.7.1'
 gem 'puma',                         '~> 3.11.2'
 gem 'turbolinks'
-gem 'jquery-rails',                 '~> 4.2.1'
+gem 'jquery-rails',                 '~> 4.3.1'
 gem 'devise',                       '~> 4.4.0' # Managing environment variables
 gem 'rack-timeout',                 '~> 0.4'
 gem 'kaminari',                     '~> 1.0', '>= 1.0.1'
@@ -14,14 +14,12 @@ gem 'github_api',                   '~> 0.14' # to pull in the curriculum files
 gem 'octokit',                      '~> 4.6'
 gem 'omniauth-github',              '~> 1.1.2' #for Github Authentication
 gem 'omniauth-google-oauth2',       '~> 0.5.1' #for Google Authentication
-gem 'font-awesome-rails',           '~> 4.7'
-gem 'bootstrap',                    '~> 4.0.0.alpha6'
+gem 'bootstrap',                    '~> 4.1.2'
 gem 'uglifier',                    '~> 3.0'
 gem 'friendly_id',                  '~> 5.1'
 gem 'cancancan',                    '~> 1.15'
 gem 'sass-rails',                   '~> 5.0'
 gem 'rack-attack'
-gem 'tether-rails' # dependency for bootstrap tooltips
 gem 'acts_as_votable'
 gem 'kramdown'
 gem 'toastr-rails'
@@ -29,28 +27,24 @@ gem 'gibbon',                       '~> 3.2.0' # for Mailchimp
 gem 'nokogiri',                     '~> 1.8', '>= 1.8.4'
 gem 'sprockets',                    '~> 3.7.2'
 gem 'skylight'
+gem 'newrelic_rpm',               '~> 3.17'
+gem 'activeadmin'
 
 group :production do
   gem 'rails_12factor',             '~> 0.0.3'
-  gem 'newrelic_rpm',               '~> 3.17'
 end
 
 group :development, :test do
   gem 'rspec-rails',                       '~> 3.5'
-  gem 'cucumber-rails',require: false
   gem 'simplecov', :require => false
-  gem 'factory_girl_rails',                '~> 4.7'
-  gem 'capybara',                          '~> 2.10'
-  gem 'phantomjs',                         '~> 2.1'
-  gem 'poltergeist',                       '~> 1.1'
-  gem 'capybara-email',                    '~> 2.5'
+  gem 'factory_bot_rails',                '~> 4.11'
   gem 'database_cleaner',                  '~> 1.5'
   gem 'webmock',                           '~> 2.1'
   gem 'vcr',                               '~> 3.0'
   gem 'shoulda-matchers',                  '~> 3.1'
   gem 'rake',                              '~> 11.3'
   gem 'rails-controller-testing',          '~> 1.0'
-  gem 'figaro',                            '1.1'
+  gem 'dotenv-rails'
   gem 'bundle-audit'
 end
 
